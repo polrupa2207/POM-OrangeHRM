@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="TestCases.LoginTestCase"/>
+      <class name="TestCases.HomeTestCase"/>
+      <class name="TestCases.WorkShiftTestCase"/>
+      <class name="TestCases.ContactDetailsTestCase"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="TestCases.WorkShiftTestCase">
+        <methods>
+          <include name="addWorkshiftOperation"/>
+        </methods>
+      </class> <!-- TestCases.WorkShiftTestCase -->
+      <class name="TestCases.LoginTestCase">
+        <methods>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- TestCases.LoginTestCase -->
+      <class name="TestCases.ContactDetailsTestCase">
+        <methods>
+          <include name="addContactDetails"/>
+        </methods>
+      </class> <!-- TestCases.ContactDetailsTestCase -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
